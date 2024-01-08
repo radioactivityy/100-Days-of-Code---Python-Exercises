@@ -1,0 +1,60 @@
+print('''-..-";|:`.`.__..__.'.';|                    
+            || :-"      "-; ||                    
+            :;              :;                    
+            /  .==.    .==.  \                    
+           :      _.--._      ;                   
+           ; .--.' `--' `.--. :                   
+          :   __;`      ':__   ;                  
+          ;  '  '-._:;_.-'  '  :                  
+          '.       `--'       .'                  
+           ."-._          _.-".                   
+         .'     ""------""     `.                 
+        /`-                    -'\                
+       /`-                      -'\               
+      :`-   .'              `.   -';              
+      ;    /                  \    :              
+     :    :                    ;    ;             
+     ;    ;                    :    :             
+     ':_:.'                    '.;_;'             
+        :_                      _;                
+        ; "-._                -" :`-.     _.._    
+        :_          ()          _;   "--::__. `.  
+         \"-                  -"/`._           :  
+        .-"-.                 -"-.  ""--..____.'  
+       /         .__  __.         \               
+      : / ,       / "" \       . \ ; bug          
+       "-:___..--"      "--..___;-''')
+print("Welcome to Treasure Island. Your mission is to find the treasure.")
+
+# Crossroad
+print("You're at a crossroad. Where do you want to go? Type 'left' or 'right'")
+user = input().lower()  # Convert the user input to lowercase
+
+if user == "left":
+    # Lake
+    print("You've come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.")
+    user_lake = input().lower()  # Convert the user input to lowercase
+
+    if user_lake == "wait":
+        # Doors
+        print("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow, and one blue. Which color do you choose?")
+        user_door = input().lower()  # Convert the user input to lowercase
+
+        if user_door == "red":
+            print("Burned by fire. Game Over.")
+        elif user_door == "blue":
+            print("Eaten by beasts. Game Over.")
+        elif user_door == "yellow":
+            print("You Win!")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
+
+    elif user_lake == "swim":
+        print("Attacked by trout. Game Over.")
+    else:
+        print("Invalid choice. Game Over.")
+
+elif user == "right":
+    print("Fall into a hole. Game Over.")
+else:
+    print("Invalid choice. Game Over.")
